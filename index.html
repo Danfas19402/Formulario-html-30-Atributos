@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulário HTML - 30 Atributos</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="header-badge">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path d="M9 11l3 3L22 4"></path>
+            <path
+              d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+            ></path>
+          </svg>
+        Atributos de Formulário HTML5
+        </div>
+
+        <!-- 2º Algoritmo-->
+        <h1 class="header-title">FORMULÁRIO HTML - 30 ATRIBUTOS</h1>
+        
+        <!-- 3º Algoritmo-->
+        <p class="header-subtitle">
+          Um exemplo completo de atributos de formulários HTML que mostra como eles funcionam com validação, têm bom desempenho em dispositivos móveis e proporcionam uma melhor experiência ao usuário.
+        </p>
+
+        <!-- 4º Algoritmo-->
+        <div class="header-stats">
+          <div class="stat-item">
+            <div class="stat-value">30</div>
+            <div class="stat-label">Atributos Nativos</div>
+          </div>
+          <div class="stat-item">
+        
+        <!-- 5º Algoritmo-->    
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Suporte do navegador</div>
+          </div>
+          <div class="stat-item">
+
+        <!-- 6º Algoritmo-->
+            <div class="stat-value">0 KB</div>
+            <div class="stat-label">JavaScript necessário</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+     <!-- Validação de Formulários -->
+    <main class="container">
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Validação de formulários</h2>
+              <p class="card-subtitle">
+                Validação e restrições de entrada integradas
+              </p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Obrigatório (a)</span>
+            <span class="tag">Padrão</span>
+            <span class="tag">Comprimento mínimo</span>
+            <span class="tag">Comprimento máximo</span>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="username" class="form-label form-label-required"
+                >Nome de usuário</label
+              >
+              <input
+                type="text"
+                id="username"
+                class="form-input"
+                placeholder="Digite o nome de usuário"
+                required
+                minlength="3"
+                maxlength="20"
+                pattern="[A-Za-z0-9_]+"
+                title="Only letters, numbers, and underscores allowed"
+                autocomplete="username"
+              />
+              <div class="form-hint">De 3 a 20 caracteres, somente alfanuméricos.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email1" class="form-label form-label-required"
+                >Endereço de email</label
+              >
+              <input
+                type="email"
+                id="email1"
+                class="form-input"
+                placeholder="programadorweb19402@gmail.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="pin" class="form-label form-label-required"
+                >PIN de segurança</label
+              >
+              <input
+                type="text"
+                id="pin"
+                class="form-input"
+                placeholder="PIN de 4 dígitos"
+                pattern="[0-9]{4}"
+                title="Enter exactly 4 digits"
+                inputmode="numeric"
+                required
+              />
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="button button-primary">
+                Enviar formulário
+              </button>
+              <button
+                type="submit"
+                formnovalidate
+                class="button button-secondary"
+              >
+              Salvar rascunho
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Cartão de autocompletar -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Preenchimento Automático Inteligente</h2>
+              <p class="card-subtitle">Preenchimento Automático Integrado ao Navegador</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Preenchimento Automático</span>
+            <span class="tag">Foco Automático</span>
+          </div>
+
+          <form>
+            <div class="info-box">
+              <div class="info-box-content">
+                O primeiro campo de entrada recebe foco automático ao carregar a página.
+                O navegador sugere informações salvas anteriormente.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fullname" class="form-label">Nome completo</label>
+              <input
+                type="text"
+                id="fullname"
+                class="form-input"
+                placeholder="Daniel Ferreira de Almeida Silva"
+                autocomplete="name"
+                autofocus
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Número de Telefone</label>
+              <input
+                type="tel"
+                id="phone"
+                class="form-input"
+                placeholder="+55 (16) 000-0000"
+                autocomplete="tel"
+                inputmode="tel"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address" class="form-label">Endereço da Rua</label>
+              <input
+                type="text"
+                id="address"
+                class="form-input"
+                placeholder="Rua 53, 77"
+                autocomplete="street-address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="city" class="form-label">Cidade</label>
+              <input
+                type="text"
+                id="city"
+                class="form-input"
+                placeholder="Araraquara-SP"
+                autocomplete="address-level2"
+              />
+            </div>
+
+            <button type="submit" class="button button-primary">
+              Salvar informações
+            </button>
+          </form>
+        </div>
+
+        <!-- Teclados móveis -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Otimização para Dispositivos Móveis</h2>
+              <p class="card-subtitle">Teclados Sensíveis ao Contexto</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Modo de Entrada</span>
+            <span class="tag">Dica da Tecla Enter</span>
+            <span class="tag">Capitalizar Automaticamente</span>
+          </div>
+
+          <form>
+            <div class="info-box">
+              <div class="info-box-content">
+            Diferentes layouts de teclado aparecem automaticamente em dispositivos móveis
+            com base no tipo de entrada.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="price" class="form-label">Preço</label>
+              <input
+                type="text"
+                id="price"
+                class="form-input"
+                placeholder="99.99"
+                inputmode="decimal"
+                enterkeyhint="next"
+              />
+              <div class="form-hint">Teclado Decimal em Dispositivos Móveis</div>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity" class="form-label">Quantidade</label>
+              <input
+                type="text"
+                id="quantity"
+                class="form-input"
+                placeholder="10"
+                inputmode="numeric"
+                enterkeyhint="next"
+              />
+              <div class="form-hint">Teclado Numérico em Dispositivos Móveis</div>
+            </div>
+
+            <div class="form-group">
+              <label for="website" class="form-label">URL do Site</label>
+              <input
+                type="text"
+                id="website"
+                class="form-input"
+                placeholder="example.com"
+                inputmode="url"
+                enterkeyhint="go"
+                autocapitalize="none"
+              />
+              <div class="form-hint">Teclado de URL com Atalhos de Domínio</div>
+            </div>
+
+            <div class="form-group">
+              <label for="search" class="form-label">Consulta de Pesquisa</label>
+              <input
+                type="search"
+                id="search"
+                class="form-input"
+                placeholder="Pesquisar produtos..."
+                enterkeyhint="search"
+              />
+              <div class="form-hint">A tecla Enter exibe "Pesquisar"</div>
+            </div>
+
+            <button type="submit" class="button button-primary">
+              Continue
+            </button>
+          </form>
+        </div>
+
+        <!-- Controles numéricos -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <line x1="4" y1="9" x2="20" y2="9"></line>
+                <line x1="4" y1="15" x2="20" y2="15"></line>
+                <line x1="10" y1="3" x2="8" y2="21"></line>
+                <line x1="16" y1="3" x2="14" y2="21"></line>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Controles de Número e Data</h2>
+              <p class="card-subtitle">Restrições e intervalos de valores</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Minimo (a)</span>
+            <span class="tag">Máximo (a)</A></span>
+            <span class="tag">Etapa</span>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="age" class="form-label">Idade</label>
+              <input
+                type="number"
+                id="age"
+                class="form-input"
+                placeholder="25"
+                min="18"
+                max="100"
+              />
+              <div class="form-hint">O valor deve estar entre 18 e 100.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="amount" class="form-label">Quantia</label>
+              <input
+                type="number"
+                id="amount"
+                class="form-input"
+                placeholder="0.00"
+                min="0"
+                step="0.01"
+              />
+              <div class="form-hint">Incrementos de 0,01 para a moeda</div>
+            </div>
+
+            <div class="form-group">
+              <label for="date" class="form-label">Selecione a Data</label>
+              <input
+                type="date"
+                id="date"
+                class="form-input"
+                min="2025-01-01"
+                max="2025-12-31"
+              />
+              <div class="form-hint">Período limitado até 2025</div>
+            </div>
+
+            <div class="form-group">
+              <label for="time" class="form-label">Horário</label>
+              <input
+                type="time"
+                id="time"
+                class="form-input"
+                min="09:00"
+                max="17:00"
+                step="900"
+              />
+              <div class="form-hint">
+                Horário de funcionamento: 9h às 17h, com intervalos de 15 minutos.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="volume" class="form-label">Nível de Volume</label>
+              <input
+                type="range"
+                id="volume"
+                name="volume"
+                min="0"
+                max="100"
+                step="5"
+                value="50"
+              />
+              <div class="range-output" id="volumeValue">100</div>
+            </div>
+
+            <button type="submit" class="button button-primary">
+           Aplicar configurações
+            </button>
+          </form>
+        </div>
+
+        <!-- Envio de arquivos -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Controles de upload de arquivos</h2>
+              <p class="card-subtitle">
+               Restrições de tipo de arquivo e seleção múltipla
+              </p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Aceitar</span>
+            <span class="tag">Múltiplos (as)</span>
+            <span class="tag">Capturar</span>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="images" class="form-label">Arquivos de Imagem</label>
+              <input
+                type="file"
+                id="images"
+                class="form-input"
+                accept="image/*"
+                multiple
+                style="padding: 10px; cursor: pointer"
+              />
+              <div class="form-hint">Aceita vários Arquivos de Imagem.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="documents" class="form-label">Documentos</label>
+              <input
+                type="file"
+                id="documents"
+                class="form-input"
+                accept=".pdf,.doc,.docx"
+                style="padding: 10px; cursor: pointer"
+              />
+              <div class="form-hint">Somente arquivos PDF, DOC ou DOCX</div>
+            </div>
+
+            <div class="form-group">
+              <label for="camera" class="form-label">Captura da Câmera</label>
+              <input
+                type="file"
+                id="camera"
+                class="form-input"
+                accept="image/*"
+                capture="environment"
+                style="padding: 10px; cursor: pointer"
+              />
+              <div class="form-hint">Abre a Câmera em Dispositivos Móveis</div>
+            </div>
+
+            <button type="submit" class="button button-primary">
+          Enviar Arquivos
+            </button>
+          </form>
+        </div>
+
+       <!-- Substituições de Botões de Formulário -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Substituições de Botão</h2>
+              <p class="card-subtitle">Ações diferentes para cada Botão</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Formação</span>
+            <span class="tag">Método de Formulário</span>
+            <span class="tag">Alvo de Forma</span>
+            <span class="tag">Forma Mono Validar</span>
+          </div>
+
+          <form action="/save" method="get">
+            <div class="info-box">
+              <div class="info-box-content">
+               Cada botão pode enviar dados para diferentes endpoints com diferentes
+               métodos e destinos sem JavaScript.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="article" class="form-label">Título do Artigo</label>
+              <input
+                type="text"
+                id="article"
+                class="form-input"
+                placeholder="Digite o Título do Artigo"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="content" class="form-label">Contente</label>
+              <textarea
+                id="content"
+                class="form-textarea"
+                placeholder="Escreva seu conteúdo aqui..."
+                rows="4"
+              ></textarea>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="button button-primary">
+             Salvar (OBTER)
+              </button>
+              <button
+                type="submit"
+                formaction="/preview"
+                formtarget="_blank"
+                class="button button-secondary"
+              >
+              Pré-visualização em Nova Aba
+              </button>
+              <button
+                type="submit"
+                formmethod="post"
+                formaction="/publish"
+                class="button button-secondary"
+              >
+                Publicar (POSTAGEM)
+              </button>
+            </div>
+          </form>
+        </div>
+
+      <!-- Lista de Dados -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Sugestões Inteligentes</h2>
+              <p class="card-subtitle">Opções de Preenchimento Automático da Lista de Dados</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Lista</span>
+            <span class="tag">Lista de Dados</span>
+          </div>
+
+          <form>
+            <div class="info-box">
+              <div class="info-box-content">
+            Comece a digitar para ver sugestões. Os usuários podem selecionar da lista
+            ou inserir valores personalizados.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="browser" class="form-label">Preferências do Navegador</label>
+              <input
+                type="text"
+                id="browser"
+                class="form-input"
+                list="browsers"
+                placeholder="Digite ou selecione o Navegador..."
+              />
+              <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Safari"></option>
+                <option value="Edge"></option>
+                <option value="Opera"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label for="country" class="form-label">País</label>
+              <input
+                type="text"
+                id="country"
+                class="form-input"
+                list="countries"
+                placeholder="Digite ou selecione o país..."
+              />
+              <datalist id="countries">
+                <option value="United States"></option>
+                <option value="United Kingdom"></option>
+                <option value="Canada"></option>
+                <option value="Australia"></option>
+                <option value="Germany"></option>
+                <option value="France"></option>
+                <option value="Japan"></option>
+                <option value="India"></option>
+              </datalist>
+            </div>
+
+            <button type="submit" class="button button-primary">
+             Salvar preferências
+            </button>
+          </form>
+        </div>
+
+<!-- Recursos da Área de Texto -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                <line x1="9" y1="20" x2="15" y2="20"></line>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Controles de Área de Texto</h2>
+              <p class="card-subtitle">Opções de Configuração da Área de Texto</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Minimizar</span>
+            <span class="tag">Maximizar</span>
+            <span class="tag">Restaurar</span>
+            <span class="tag">Verificação Ortográfica</span>
+            <span class="tag">Fechar</span>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="comment" class="form-label">Comentário</label>
+              <textarea
+                id="comment"
+                class="form-textarea"
+                rows="4"
+                cols="50"
+                wrap="soft"
+                spellcheck="true"
+                minlength="10"
+                maxlength="500"
+                placeholder="Escreva seu comentário aqui (mínimo de 10, máximo de 500 caracteres)..."
+                enterkeyhint="send"
+              ></textarea>
+              <div class="form-hint">
+                A verificação ortográfica está ativada para conteúdo em linguagem natural.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="code" class="form-label">Trecho de Código</label>
+              <textarea
+                id="code"
+                class="form-textarea"
+                rows="4"
+                cols="50"
+                wrap="soft"
+                spellcheck="false"
+                placeholder="Cole seu código aqui..."
+                autocapitalize="none"
+              ></textarea>
+              <div class="form-hint">A Verificação Ortográfica está desativada para entrada de código.</div>
+            </div>
+
+            <button type="submit" class="button button-primary">Enviar</button>
+          </form>
+        </div>
+
+        <!-- Atributos Especiais -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Atributos Especiais</h2>
+              <p class="card-subtitle">Recursos adicionais do formulário</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Somente Leitura</span>
+            <span class="tag">Desabilitado (a)</span>
+            <span class="tag">Nome do Diretório</span>
+            <span class="tag">Tamanho</span>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="orderid" class="form-label">ID do pedido</label>
+              <input
+                type="text"
+                id="orderid"
+                class="form-input"
+                value="ORD-123456"
+                readonly
+              />
+              <div class="form-hint">Campo somente Leitura, o valor foi enviado.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="status" class="form-label">Status do Processamento</label>
+              <input
+                type="text"
+                id="status"
+                class="form-input"
+                value="Processamento..."
+                disabled
+              />
+              <div class="form-hint">
+               Campo desabilitado, nenhum valor foi enviado.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="rtltext" class="form-label"
+                >Texto com instruções</label
+              >
+              <input
+                type="text"
+                id="rtltext"
+                class="form-input"
+                dirname="rtltext.dir"
+                placeholder="Digite o texto (tente árabe ou hebraico)"
+              />
+              <div class="form-hint">
+              Envia tanto o valor quanto a direção do texto (da esquerda para a direita).
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="zipcode" class="form-label">CEP</label>
+              <input
+                type="text"
+                id="zipcode"
+                class="form-input"
+                size="10"
+                placeholder="12345"
+                maxlength="10"
+              />
+              <div class="form-hint">O atributo de tamanho controla a largura visível.</div>
+            </div>
+
+            <button type="submit" class="button button-primary">Enviar</button>
+          </form>
+        </div>
+
+      <!-- Associação de Formulário -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 010 7.75"></path>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Elementos de Formulário Externos</h2>
+              <p class="card-subtitle">
+              Controle de Associação e validação de Formulários
+              </p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Form</span>
+            <span class="tag">Novalidate</span>
+          </div>
+
+          <form id="mainForm" action="/submit" novalidate>
+            <div class="info-box">
+              <div class="info-box-content">
+              A validação do formulário está desativada. O campo de e-mail abaixo está fora do elemento do formulário, mas vinculado por meio do atributo do formulário.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="formname" class="form-label form-label-required"
+                >Nome</label
+              >
+              <input
+                type="text"
+                id="formname"
+                class="form-input"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="formemail" class="form-label form-label-required"
+                >E-mail</label
+              >
+              <input
+                type="email"
+                id="formemail"
+                class="form-input"
+                placeholder="programadorweb19402@gmail.com"
+                required
+              />
+            </div>
+
+            <button type="submit" class="button button-primary">
+            Enviar Formulário
+            </button>
+          </form>
+
+          <div class="form-group" style="margin-top: 24px">
+            <label for="externalemail" class="form-label"
+              >Campo de e-mail externod</label
+            >
+            <input
+              type="email"
+              id="externalemail"
+              class="form-input"
+              form="mainForm"
+              placeholder="https://www.linkedin.com/in/daniel-ferreira1969/"
+            />
+            <div class="form-hint">
+              Este campo de entrada está fora do formulário, mas está vinculado a ele.
+            </div>
+          </div>
+
+          <button type="submit" form="mainForm" class="button button-secondary">
+            Botão de envio Externo
+          </button>
+        </div>
+<!-- Vários e-mails -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Valores Múltiplos</h2>
+              <p class="card-subtitle">Vários endereços de e-mail</p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Múltiplos (a)</span>
+          </div>
+
+          <form>
+            <div class="info-box">
+              <div class="info-box-content">
+                Insira vários endereços de e-mail separados por vírgulas. Cada e-mail
+                é validado individualmente.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="recipients" class="form-label form-label-required"
+                >Destinatários de e-mail</label
+              >
+              <input
+                type="email"
+                id="recipients"
+                class="form-input"
+                multiple
+                placeholder="programadorweb19402@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cclist" class="form-label">Destinatários CC</label>
+              <input
+                type="email"
+                id="cclist"
+                class="form-input"
+                multiple
+                placeholder="Destinatários opcionais em CC"
+              />
+            </div>
+
+            <button type="submit" class="button button-primary">
+             Enviar e-mail
+            </button>
+          </form>
+        </div>
+
+        <!-- Preencha o formulário de inscrição -->
+        <div class="card" style="grid-column: 1 / -1">
+          <div class="card-header">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <line x1="20" y1="8" x2="20" y2="14"></line>
+                <line x1="23" y1="11" x2="17" y2="11"></line>
+              </svg>
+            </div>
+            <div class="card-header-content">
+              <h2 class="card-title">Preencha o Formulário de Inscrição.</h2>
+              <p class="card-subtitle">
+                Todos os atributos combinados em um exemplo abrangente.
+              </p>
+            </div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Todos os 30 atributos</span>
+          </div>
+
+          <form>
+            <div class="grid">
+              <div>
+                <div class="form-group">
+                  <label for="regname" class="form-label form-label-required"
+                    >Nome Completo</label
+                  >
+                  <input
+                    type="text"
+                    id="regname"
+                    class="form-input"
+                    placeholder="Daniel Ferreira de Almeida Silva"
+                    required
+                    minlength="3"
+                    autocomplete="name"
+                    autocapitalize="words"
+                    autofocus
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="regemail" class="form-label form-label-required"
+                    >Endereço de Email</label
+                  >
+                  <input
+                    type="email"
+                    id="regemail"
+                    class="form-input"
+                    placeholder="programadorweb19402@gmail.com"
+                    required
+                    autocomplete="email"
+                    autocapitalize="none"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="regphone" class="form-label">Número de Telefone</label>
+                  <input
+                    type="tel"
+                    id="regphone"
+                    class="form-input"
+                    placeholder="+55 (16) 99776-3983"
+                    autocomplete="tel"
+                    inputmode="tel"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="regdob" class="form-label form-label-required"
+                    >Data de Nascimento</label
+                  >
+                  <input
+                    type="date"
+                    id="regdob"
+                    class="form-input"
+                    required
+                    autocomplete="bday"
+                    min="1924-01-01"
+                    max="2007-01-01"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div class="form-group">
+                  <label for="regaddress" class="form-label"
+                    >Endereço da Rua</label
+                  >
+                  <input
+                    type="text"
+                    id="regaddress"
+                    class="form-input"
+                    placeholder="Rua 53, 77"
+                    autocomplete="street-address"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="regcity" class="form-label">Cidade</label>
+                  <input
+                    type="text"
+                    id="regcity"
+                    class="form-input"
+                    placeholder="Araraquara-SP"
+                    autocomplete="address-level2"
+                    list="cities"
+                  />
+                  <datalist id="cities">
+                    <option value="Araraquara-SP"></option>
+                    <option value="Matão"></option>
+                    <option value="São Carlos"></option>
+                    <option value="Ribeirão Preto"></option>
+                    <option value="Limeira"></option>
+                    <option value="Campinas"></option>
+                  </datalist>
+                </div>
+
+                <div class="form-group">
+                  <label for="regzip" class="form-label">Código Postal</label>
+                  <input
+                    type="text"
+                    id="regzip"
+                    class="form-input"
+                    placeholder="14806-370"
+                    autocomplete="postal-code"
+                    pattern="[0-9]{5}"
+                    title="Enter 5-digit zip code"
+                    inputmode="numeric"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="regbio" class="form-label">Biografia</label>
+                  <textarea
+                    id="regbio"
+                    class="form-textarea"
+                    placeholder="Conte-nos sobre você..."
+                    rows="4"
+                    maxlength="200"
+                    spellcheck="true"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox-group">
+                <input type="checkbox" id="terms" required />
+                <label for="terms" class="form-label" style="margin: 0"
+                  >Concordo com os termos e condições.</label
+                >
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" class="button button-primary">
+             Criar uma conta
+              </button>
+              <button
+                type="submit"
+                formnovalidate
+                class="button button-secondary"
+              >
+             Salvar como Rascunho
+              </button>
+              <button type="reset" class="button button-secondary">
+               Limpar formulário
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
